@@ -1,8 +1,33 @@
-app:
-  name: Tech Interface - Swagger and Profiles Tutorial
+info:
+  app:
+    name: Spring Boot Perks
+    version: 1-0-0-SNAPSHOT
+
 server:
   port: 8091
+# actuator  properties configuration
+
+management:
+  security:
+    enabled: false  # disabled security  for end points , so it can  be viewed to all
+  endpoints:
+      web:
+        exposure:
+          include: "*"  # will allow all
+          #include : info ,health
+      jmx:
+        exposure:
+          include: "*"  # will allow all
+          #exclude : "env" // beans etc ..
+      enpoint:
+        shutdown:
+          enabled: true # this one  by default  it is false
+
+# http://localhost:8091/actuator - generic base path to access all
 
 
+
+# profiles related configuration
 spring:
   profile-testing-key: techinterface - no profiles set  .
+
