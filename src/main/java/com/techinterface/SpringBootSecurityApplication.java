@@ -13,10 +13,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // http://localhost:8091/v3/api-docs
 
 @SpringBootApplication
+/*
 public class SwaggerIntegrationApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SwaggerIntegrationApplication.class, args);
+	}
+*/
+public class SpringBootSecurityApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootSecurityApplication.class, args);
 	}
 
 }
