@@ -21,11 +21,14 @@ public class UserController {
     @GetMapping("/fetch/{userid}")
     @ApiOperation("Returns User based in user id .")
     public User getUserById(@PathVariable  String  userid){
+        logger.info("UserController : fetching User with id {}  ",userid);
+        logger.debug("UserController : fetching User with id {}  ",userid);
         return userService.getUserById(userid);
     }
 
     @GetMapping("/fetchAll")
     public List<User> getAllUsers(){
+        logger.info("UserController-> getAllUsers ");
         return userService.getAllUsers();
     }
 
