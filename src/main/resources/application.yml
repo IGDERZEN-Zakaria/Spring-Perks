@@ -31,3 +31,25 @@ management:
 spring:
   profile-testing-key: techinterface - no profiles set  .
 
+
+# Logging Hierarchy Level
+# ALL -> TRACE -> DEBUG -> INFO -> WARN-> ERROR -> FATAL -> OFF
+# For color code display
+# -spring.output.ansi.enabled=ALWAYS
+# You can configure package wise log levels
+# -com.techinterface.controller : DEBUG
+logging:
+  level:
+#   ROOT: INFO
+    ROOT: DEBUG
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: "C:/Users/Client/Documents/IdeaProjects/Spring-boot-swagger-config/Spring-Boot/src/main/resources/logs/Spring-Boot-Perks.log"
+    max-size: 10MB
+    clean-history-on-start: true
+
+#    spring:
+#      output:
+#        ansi:
+#         enabled: ALWAYS
